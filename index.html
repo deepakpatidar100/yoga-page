@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function deepakpatidar() {
+            document.getElementById("dName").innerHTML = document.getElementById("Name").value;
+            document.getElementById("dMobile").innerHTML = document.getElementById("Mobile").value;
+            document.getElementById("dEmail").innerHTML = document.getElementById("Email").value;
+            // document.getElementById("dFees").innerHTML = document.getElementById("Fees").value;
+            // document.getElementById("dAdvance").innerHTML = document.getElementById("Advance").value;
+
+            var Fee = "0";
+            var AdvanceAmoun = "0";
+            var Total = "0";
+
+            var Fee = document.getElementById("Fees").value;
+            var AdvanceAmoun = document.getElementById("Advance").value;
+            var Total = document.getElementById("Total");
+
+            Total = Fee - AdvanceAmoun;
+
+            document.getElementById("dFees").innerHTML = Fee;
+            document.getElementById("dAdvance").innerHTML = AdvanceAmoun;
+            document.getElementById("Total").innerHTML = `&#8377;${Total}`;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <h2 class="justify-content-center text-center mt-4">Meditative</h2>
+        <div>
+            <ul class="justify-content-around mt-4 d-flex">
+                <a href="kfc.html">
+                    <li><b>HOME</b></li>
+                </a>
+                <li><b>ABOUT</b></li>
+                <li><b>TRAINER</b></li>
+                <li><b>CLASSES</b></li>
+                <li><b>SCHEDULE</b></li>
+                <li><b>Blog</b></li>
+                <li><b>CONTENT</b></li>
+            </ul>
+        </div>
+        <div>
+            <div class="position-absolute">
+                <img src="../public/images/yoga.jpg" width="117%" alt="">
+            </div>
+
+        </div>
+        <div class="position-relative text-white   justify-content-center text-center" style="margin-top: 100px;">
+            <h1 class="text-center">Discover Your Inner Sanctuary</h1>
+            <p class="text-center">Everyday We Being Hope and smile to the patient We Serve to </p>
+            <button class="btn btn-outline-primary" data-bs-target="#deepak" data-bs-toggle="modal"><b>Fill This
+                    Registration Form</b></button>
+        </div>
+
+    </div>
+    <div class="d-flex position-absolute gap-4 ;" style="margin-top:670px ; ">
+        <div><img src="../public/images/yoga5.webp" width="100%" height="200px" style="border-radius: 50%;" alt="">
+        </div>
+        <div><img src="../public/images/yoga2.jfif" width="100%" height="200px" style="border-radius: 50%;" alt="">
+        </div>
+        <div><img src="../public/images/yoga3.jfif" width="100%" height="200px" style="border-radius: 50%;" alt="">
+        </div>
+        <div><img src="../public/images/yoga4.jpg" width="100%" height="200px" style="border-radius: 50%;" alt=""></div>
+    </div>
+
+    <div class="modal " id="deepak">
+        <div class="modal-dialog modal-dialog-centered  ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="text-danger">Registration form</h2>
+                </div>
+                <div class="modal-body">
+
+                    <div> Name <input type="text" id="Name" class="form-control"></div>
+                    <div> Mobile<input type="mobile" id="Mobile" class="form-control"></div>
+                    <div> Email<input type="Email" id="Email" class="form-control"></div>
+                    <div>GYM Fees<input type="text" id="Fees" class="form-control"></div>
+                    <div> Advance Amount<input type="text" id="Advance" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-info" onclick="deepakpatidar()" data-bs-target="#ndmodal"
+                        data-bs-toggle="modal"> Register </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal" id="ndmodal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <dl>
+                        <dt>Name</dt>
+                        <dd id="dName"></dd>
+                        <dt>Mobile</dt>
+                        <dd id="dMobile"></dd>
+                        <dt>Email</dt>
+                        <dd id="dEmail"></dd>
+                        <dt>Fees</dt>
+                        <dd id="dFees"></dd>
+                        <dt>Advance Amount</dt>
+                        <dd id="dAdvance"></dd>
+                        <dt>Remaning Amount</dt>
+                        <dd id="Total"></dd>
+                    </dl>
+                </div>
+                <div>
+                    <button class="btn btn-success " data-bs-dismiss="modal">OK</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
